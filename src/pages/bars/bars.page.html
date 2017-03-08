@@ -1,0 +1,125 @@
+<ion-header>
+    <ion-navbar>
+        <button style="width:32px !important " ion-button menuToggle="menu1" icon-only>
+       <img width="auto" height="30" src="assets/icon/localizacao.svg" alt="">
+    </button>
+
+        <button right ion-button menuToggle="menu2" icon-only>
+      <ion-icon color="primary" style=" font-size: 3rem;" name='ios-funnel-outline'></ion-icon>
+    </button>
+        <div class="logo">
+
+
+            <img width="auto" height="30" src="assets/icon/logo.svg" alt="">
+        </div>
+    </ion-navbar>
+
+
+
+</ion-header>
+
+
+
+
+
+<ion-content>
+
+ <div *ngIf="isLoading"  class="searching">
+            <div>
+                <ion-spinner color="primary"></ion-spinner>
+            </div>
+            Localizando bares...
+        </div>
+     
+
+    <ion-grid *ngIf="!isLoading">
+        
+        <ion-row>
+            <ion-col width-50>
+                <ion-card class="card-left">
+                    <div class="price">
+                        <img src="assets/icon/bandeira_preco.svg" alt="">
+                         <div>
+                         <span>R$ </span> 8
+                          </div>
+                    </div>
+
+                    <img class="img-logo-bar" src="assets/seu_pires.jpg" />
+
+                    <ion-card-content style="text-align: center">
+                        <ion-card-title class="bar">
+                            SEU PIRES
+                            <hr class="line">
+
+                        </ion-card-title>
+
+                        <span class="place"> GÁVEA </span><span class="distance"> 0.5 km</span>
+
+                    </ion-card-content>
+                </ion-card>
+                <ion-card  class="card-left">
+                    <div class="price">
+                        <img src="assets/icon/bandeira_preco.svg" alt="">
+                        <div>
+                         <span>R$ </span> 10 
+                          </div>
+                    </div>
+                    <img class="img-logo-bar" src="assets/itahy.jpg" />
+                    <ion-card-content style="text-align: center">
+                        <ion-card-title class="bar">
+                            ITAHY
+                            <hr class="line">
+
+                        </ion-card-title>
+
+                        <span class="place"> LEBLON </span><span class="distance"> 3 km</span>
+
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+
+            <ion-col width-50>
+                <ion-card (click)='onCard()' class="card-right">
+                    <div class="price">
+                        <img src="assets/icon/bandeira_preco.svg" alt="">
+                        <div>
+                         <span>R$ </span> 12 
+                          </div>
+                    </div>
+                    <img class="img-logo-bar" src="assets/belmonte.jpg" />
+                    <ion-card-content style="text-align: center">
+                        <ion-card-title class="bar">
+                            BELMONTE
+                            <hr class="line">
+
+                        </ion-card-title>
+
+                        <span class="place"> LEBLON </span><span class="distance"> 3.5 km</span>
+                    </ion-card-content>
+                </ion-card>
+
+                <ion-card class="card-right">
+                    <div class="price">
+                        <img src="assets/icon/bandeira_preco.svg" alt="">
+                         <div>
+                         <span>R$ </span> 13 
+                          </div>
+                    </div>
+                    <img class="img-logo-bar" src="assets/barthodomeu.jpg" />
+                    <ion-card-content style="text-align: center">
+                        <ion-card-title class="bar">
+                            BARTHODOMEU
+                            <hr class="line">
+
+                        </ion-card-title>
+
+                        <span class="place"> IPANEMA </span><span class="distance"> 9 km</span>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+
+
+</ion-content>
